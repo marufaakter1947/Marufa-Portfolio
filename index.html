@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
 
     <title>Responsive Portfolio Website</title>
   </head>
@@ -148,9 +153,18 @@
                 High level experience in web design and development knowledge,
                 producing quality work.
               </p>
-              <a href="#contact" class="button button--flex">
-                Hire Me <i class="uil uil-message button_icon"></i>
+               <div class="about_buttons">
+              <a
+                download=""
+                href="image/Resume of Junior Frontend Developer.pdf"
+                class="button button--flex"
+              >
+                Download CV <i class="uil uil-download-alt button_icon"></i>
               </a>
+            </div>
+              <!-- <a href="#contact" class="button button--flex">
+                Hire Me <i class="uil uil-message button_icon"></i>
+              </a> -->
             </div>
           </div>
 
@@ -194,16 +208,18 @@
                 >
               </div>
 
-              <div>
+              <!-- <div>
                 <span class="about_info-title">0</span>
                 <span class="about_info-name"
                   >Companies <br />
                   worked</span
                 >
-              </div>
+              </div> -->
             </div>
-
-            <div class="about_buttons">
+<a href="#contact" class="button button--flex">
+                Hire Me <i class="uil uil-message button_icon"></i>
+              </a>
+            <!-- <div class="about_buttons">
               <a
                 download=""
                 href="image/Resume of Marufa Akter.pdf"
@@ -211,7 +227,7 @@
               >
                 Download CV <i class="uil uil-download-alt button_icon"></i>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -239,7 +255,7 @@
             <div class="skills_list grid">
               <div class="skills_data">
                 <div class="skills_titles">
-                  <h3 class="skills_name">HTML</h3>
+                  <h3 class="skills_name">HTML5</h3>
                   <span class="skills_number">90%</span>
                 </div>
                 <div class="skills_bar">
@@ -249,7 +265,7 @@
 
               <div class="skills_data">
                 <div class="skills_titles">
-                  <h3 class="skills_name">CSS</h3>
+                  <h3 class="skills_name">Tailwind CSS</h3>
                   <span class="skills_number">80%</span>
                 </div>
                 <div class="skills_bar">
@@ -260,7 +276,7 @@
               <div class="skills_data">
                 <div class="skills_titles">
                   <h3 class="skills_name">JavaScript</h3>
-                  <span class="skills_number">70%</span>
+                  <span class="skills_number">85%</span>
                 </div>
                 <div class="skills_bar">
                   <span class="skills_percentage skills_js"></span>
@@ -286,7 +302,7 @@
 
               <div>
                 <h1 class="skills_title">Backend developer</h1>
-                <span class="skills_subtitle">More than 3 years</span>
+                <span class="skills_subtitle">More than 1 years</span>
               </div>
               <i class="uil uil-angle-down skills_arrow"></i>
             </div>
@@ -305,6 +321,15 @@
               <div class="skills_data">
                 <div class="skills_titles">
                   <h3 class="skills_name">Node Js</h3>
+                  <span class="skills_number">70%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_node"></span>
+                </div>
+              </div>
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <h3 class="skills_name">Express Js</h3>
                   <span class="skills_number">70%</span>
                 </div>
                 <div class="skills_bar">
@@ -342,13 +367,31 @@
               <i class="uil uil-swatchbook skills_icon"></i>
 
               <div>
-                <h1 class="skills_title">Designer</h1>
+                <h1 class="skills_title">Tools</h1>
                 <span class="skills_subtitle">More than 1 years</span>
               </div>
               <i class="uil uil-angle-down skills_arrow"></i>
             </div>
 
             <div class="skills_list grid">
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <h3 class="skills_name">Git & Github</h3>
+                  <span class="skills_number">90%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_figma"></span>
+                </div>
+              </div>
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <h3 class="skills_name">Vs Code</h3>
+                  <span class="skills_number">90%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_figma"></span>
+                </div>
+              </div>
               <div class="skills_data">
                 <div class="skills_titles">
                   <h3 class="skills_name">Figma</h3>
@@ -361,8 +404,8 @@
 
               <div class="skills_data">
                 <div class="skills_titles">
-                  <h3 class="skills_name">Sketch</h3>
-                  <span class="skills_number">50%</span>
+                  <h3 class="skills_name">Framer Motion</h3>
+                  <span class="skills_number">80%</span>
                 </div>
                 <div class="skills_bar">
                   <span class="skills_percentage skills_sketch"></span>
@@ -371,7 +414,7 @@
 
               <div class="skills_data">
                 <div class="skills_titles">
-                  <h3 class="skills_name">Photoshop</h3>
+                  <h3 class="skills_name">Vite</h3>
                   <span class="skills_number">90%</span>
                 </div>
                 <div class="skills_bar">
@@ -408,10 +451,10 @@
             Education
           </div>
 
-          <div class="qualification_button button--flex" data-target="#work">
+          <!-- <div class="qualification_button button--flex" data-target="#work">
           <i class="uil uil-briefcase-alt qualification_icon"></i>
           Work
-          </div>
+          </div> -->
         </div>
 
         <div class="qualification_sections">
@@ -420,7 +463,7 @@
   <!-- -----------------Qualification 1----------- -->
    <div class="qualification_data">
     <div>
-      <h3 class="qualification_title">BSc in Computer Science & Engineer</h3>
+      <h3 class="qualification_title">BSc in Computer Science & Engineering</h3>
       <span class="qualification_subtitle">Northern University of Business and Technology Khulna</span>
       <div class="qualification_calender">
         <i class="uil uil-calendar-alt"></i>
@@ -532,45 +575,6 @@
          <div class="services_content">
           <div>
             <i class="uil uil-web-grid services_icon"></i>
-            <h3 class="services_title">React <br> Developer</h3>
-          </div>
-          <span class="button button--flex button--small button--link services_button">
-            View More
-            <i class="uil uil-arrow-right button_icon"></i>
-          </span>
-
-          <div class="services_modal">
-            <div class="services_modal-content">
-              <h4 class="services_modal-title">React <br> Developer</h4>
-              <i class="uil uil-times services_modal-close"></i>
-
-              <ul class="services_modal-services grid">
-                <li class="services_modal-service">
-                  <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I develop the user interface.</p>
-                </li>
-                <li class="services_modal-service">
-                  <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>Web page development.</p>
-                </li>
-                <li class="services_modal-service">
-                  <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I create angular element interaction.</p>
-                </li>
-                <li class="services_modal-service">
-                 <i class="uil uil-check-circle services_modal-icon"></i> 
-                  <p>I position your company brand.</p>
-                </li>
-              </ul>
-              
-            </div>
-          </div>
-         </div>
-
-         <!-- ---------------Services 2--------------- -->
-         <div class="services_content">
-          <div>
-            <i class="uil uil-arrow services_icon"></i>
             <h3 class="services_title">Frontend <br> Developer</h3>
           </div>
           <span class="button button--flex button--small button--link services_button">
@@ -586,19 +590,58 @@
               <ul class="services_modal-services grid">
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I develop the user interface.</p>
+                  <p>I build responsive and modern user interfaces.</p>
                 </li>
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>Web page development.</p>
+                  <p>I develop interactive web applications using React.</p>
                 </li>
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I create angular element interaction.</p>
+                  <p>I ensure clean design, usability, and performance.</p>
+                </li>
+                <li class="services_modal-service">
+                 <i class="uil uil-check-circle services_modal-icon"></i> 
+                  <p>I convert UI designs into pixel-perfect code.</p>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+         </div>
+
+         <!-- ---------------Services 2--------------- -->
+         <div class="services_content">
+          <div>
+            <i class="uil uil-arrow services_icon"></i>
+            <h3 class="services_title">React <br> Developer</h3>
+          </div>
+          <span class="button button--flex button--small button--link services_button">
+            View More
+            <i class="uil uil-arrow-right button_icon"></i>
+          </span>
+
+          <div class="services_modal">
+            <div class="services_modal-content">
+              <h4 class="services_modal-title">React <br> Developer</h4>
+              <i class="uil uil-times services_modal-close"></i>
+
+              <ul class="services_modal-services grid">
+                <li class="services_modal-service">
+                  <i class="uil uil-check-circle services_modal-icon"></i>
+                  <p>I build fast and scalable user interfaces using React.</p>
                 </li>
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I position your company brand.</p>
+                  <p>I develop reusable components and manage state efficiently.</p>
+                </li>
+                <li class="services_modal-service">
+                  <i class="uil uil-check-circle services_modal-icon"></i>
+                  <p>I integrate REST APIs for dynamic and real-time data.</p>
+                </li>
+                <li class="services_modal-service">
+                  <i class="uil uil-check-circle services_modal-icon"></i>
+                  <p>I ensure responsive design and smooth user experience.</p>
                 </li>
               </ul>
             </div>
@@ -609,7 +652,7 @@
          <div class="services_content">
           <div>
             <i class="uil uil-pen services_icon "></i>
-            <h3 class="services_title">Next.js <br> Developer</h3>
+            <h3 class="services_title">Full-Stack <br> Developer</h3>
           </div>
           <span class="button button--flex button--small button--link services_button">
             View More
@@ -618,25 +661,25 @@
 
           <div class="services_modal">
             <div class="services_modal-content">
-              <h4 class="services_modal-title">Next.js<br> Developer</h4>
+              <h4 class="services_modal-title">Full-Stack<br> Developer</h4>
               <i class="uil uil-times services_modal-close"></i>
 
               <ul class="services_modal-services grid">
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I develop the user interface.</p>
+                  <p>I develop complete web applications from frontend to backend.</p>
                 </li>
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>Web page development.</p>
+                  <p>I build secure REST APIs and manage databases.</p>
                 </li>
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I create angular element interaction.</p>
+                  <p>I connect frontend interfaces with backend logic seamlessly.</p>
                 </li>
                 <li class="services_modal-service">
                   <i class="uil uil-check-circle services_modal-icon"></i>
-                  <p>I position your company brand.</p>
+                  <p>I deploy and maintain applications with modern tools.</p>
                 </li>
               </ul>
             </div>
@@ -749,7 +792,7 @@ SkillShare-A Local Skill Exchange Platform. </h3>
 
           <div>
             <h3 class="contact_title">Call Me</h3>
-            <span class="contact_subtitle">01676-664136</span>
+            <span class="contact_subtitle">01609656133</span>
           </div>
         </div>
 
@@ -758,7 +801,7 @@ SkillShare-A Local Skill Exchange Platform. </h3>
 
           <div>
             <h3 class="contact_title">Email</h3>
-            <span class="contact_subtitle">naime1947@gmail.com</span>
+            <span class="contact_subtitle">marufaakter1947@gmail.com</span>
           </div>
         </div>
 
@@ -774,38 +817,41 @@ SkillShare-A Local Skill Exchange Platform. </h3>
 
       </div>
 
-      <form action="" class="contact_form grid">
-        <div class="contact_inputs grid">
-          <div class="contact_content">
-            <label for="" class="contact_label">Name</label>
-            <input type="text" class="contact_input">
-          </div>
+    
 
-          <div class="contact_content">
-            <label for="" class="contact_label">Email</label>
-            <input type="email" class="contact_input">
-          </div>
 
-        </div>
+<!-- Contact Form -->
+<form id="contact-form" class="contact_form grid">
+  <div class="contact_inputs grid">
+    <div class="contact_content">
+      <label class="contact_label">Name</label>
+      <input type="text" name="name" class="contact_input" required>
+    </div>
 
-        <div class="contact_content">
-          <label for="" class="contact_label">Project</label>
-          <input type="text" class="contact_input">
-        </div>
+    <div class="contact_content">
+      <label class="contact_label">Email</label>
+      <input type="email" name="email" class="contact_input" required>
+    </div>
+  </div>
 
-        <div class="contact_content">
-          <label for="" class="contact_label">Message</label>
-          <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
-        </div>
+  <div class="contact_content">
+    <label class="contact_label">Project</label>
+    <input type="text" name="project" class="contact_input" required>
+  </div>
 
-        <div>
-          <a href="#" class="button button--flex">
-            Send Message
-            <i class="uil uil-message button_icon"></i>
-          </a>
-        </div>
+  <div class="contact_content">
+    <label class="contact_label">Message</label>
+    <textarea name="message" cols="0" rows="7" class="contact_input" required></textarea>
+  </div>
 
-      </form>
+  <div>
+    <button type="submit" class="button button--flex " style="cursor: pointer">
+      Send Message
+      <i class="uil uil-message button_icon"></i>
+    </button>
+  </div>
+</form>
+
     </div>
   </section>
 
@@ -817,7 +863,7 @@ SkillShare-A Local Skill Exchange Platform. </h3>
         <div class="footer_container container grid">
           <div>
             <h1 class="footer_title">Marufa Akter</h1>
-            <span class="footer_subtitle">Frontend Developer | MERN Stack Developer</span>
+            <span class="footer_subtitle">Frontend Developer | Full-Stack Developer</span>
           </div>
 
           <ul class="footer_links">

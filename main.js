@@ -172,31 +172,71 @@ window.addEventListener('scroll', scrollUp)
 
 // ===============Dark light theme============
 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
+document.addEventListener("DOMContentLoaded", () => {
 
-// Previously selected topic (if user selcted)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+  // ===== Theme Button =====
+  const themeButton = document.getElementById('theme-button');
+  const darkTheme = 'dark-theme';
+  const iconTheme = 'uil-sun';
 
-//we obtain the current theme that the interface has by validating the dark theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+  // Previously selected
+  const selectedTheme = localStorage.getItem('selected-theme');
+  const selectedIcon = localStorage.getItem('selected-icon');
 
-//we validate if the user previously chose a topic
-if(selectedTheme){
-  //if the validation is fullfilled,we ask what the issue was to know if we activated or deactivatedthe dark mood
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
+  const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+  const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
-//Activate or deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-  //add or remove the dark icontheme
-  document.body.classList.toggle(darkTheme)
-  themeButton.classList.toggle(iconTheme)
-  //save the theme and the current icon that the user choose
-  localStorage.setItem('selected-theme', getCurrentTheme())
-  localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  if(selectedTheme){
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
+  }
+
+  // Theme toggle
+  if(themeButton){
+    themeButton.addEventListener('click', () => {
+      document.body.classList.toggle(darkTheme);
+      themeButton.classList.toggle(iconTheme);
+
+      localStorage.setItem('selected-theme', getCurrentTheme());
+      localStorage.setItem('selected-icon', getCurrentIcon());
+    });
+  }
+
+  // ===== EmailJS Contact Form =====
+  (function(){
+    emailjs.init("mwPQTd-w_0CthJjqa");
+  })();
+
+  const contactForm = document.getElementById("contact-form");
+
+  if(contactForm){
+    contactForm.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      emailjs.sendForm(
+        "service_obhmjvn",
+        "template_osi7bpc",
+        this
+      ).then(
+        () => {
+          Toastify({
+      text: "Message sent successfully!",
+      duration: 3000,         
+      gravity: "top",          
+      position: "right",       
+      style: {
+        background: "green",
+        color: "white"
+      }
+    }).showToast();
+          contactForm.reset();
+        },
+        (error) => {
+          alert("Failed to send message!");
+          console.log(error);
+        }
+      );
+    });
+  }
+
+});
