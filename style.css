@@ -750,13 +750,12 @@ display: flex;
 
 
 /* =============Project=========== */
-/* keeps your project width same as other sections */
-.projects_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
 
+.projects_container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+}
 /* card style */
 .project_card {
   background: #fff;
@@ -1091,9 +1090,7 @@ background-color: var(--text-color-light);
     .testimonial_description{
         text-align: center;
     }
-     .projects_container {
-    grid-template-columns: 1fr;
-  }
+    
 }
 
 /* For medium devices */
@@ -1260,7 +1257,9 @@ background-color: var(--text-color-light);
     .footer_copy{
         margin-top: 4.5rem;
     }
-   
+    .projects_container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
  
 }
 
@@ -1300,6 +1299,9 @@ background-color: var(--text-color-light);
     }
     .contact_inputs{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .projects_container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     }
 }
 
