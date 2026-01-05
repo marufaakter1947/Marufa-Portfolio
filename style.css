@@ -295,9 +295,6 @@ img{
 }
 
 .home_blob{
-    /* width: 200px;
-    fill: var(--first-color); */
-
     max-width: 100%;
     height: auto;
 }
@@ -792,30 +789,19 @@ display: flex;
 
 .project_content p {
   font-size: 0.9rem;
-  color: #555;
+  color: #3e3e3e;
   margin: 0.4rem 0 1rem;
 }
 .details-btn{
   width: 100%;
   padding: 0.6rem;
   border: none;
-
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
 }
-
-.view_btn {
-  background: #e11d2a;
-  color: #fff;
-  border: none;
-  padding: 0.6rem;
-  border-radius: 6px;
-  cursor: pointer;
-  
-}
-
 
 .project_img {
   width: 100%;
@@ -835,7 +821,9 @@ display: flex;
 .active-modal {
   display: flex;
 }
-
+#modal-title{
+    color: blueviolet;
+}
 .project_modal-content {
   background: #fff;
   max-width: 600px;
@@ -845,6 +833,7 @@ display: flex;
   position: relative;
   overflow-y: auto;
   max-height: 90vh;
+  color: blueviolet;
 }
 
 .project_modal-close {
@@ -865,6 +854,7 @@ display: flex;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 5px;
 }
 
 
@@ -897,64 +887,6 @@ display: flex;
     justify-self: center;
     border-radius: 50%;
 }
-
-/* ....................TEstimonial..............
- Swiper container styling */
-.testimonial {
-    padding: 2rem 0;
-  }
-  
-  .testimonial_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .testimonial_content {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .testimonial_img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    object-fit: cover;
-  }
-  
-  .testimonial_name {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .testimonial_client {
-    font-size: 0.9rem;
-    color: gray;
-  }
-  
-  .testimonial_icon-star {
-    color: #f4c150;
-  }
-  
-  .swiper-pagination {
-    bottom: 10px;
-    text-align: center;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: #333;
-    opacity: 0.5;
-  }
-  
-  .swiper-pagination-bullet-active {
-    opacity: 1;
-  }
   
 /* ===============Contact ME=========== */
 .contact_container{
