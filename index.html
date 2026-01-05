@@ -689,73 +689,101 @@
       </div>
     </section>
 
-    <!-- ===================Portfolio============ -->
+    <!-- ===================Projects============ -->
+<section class="projects section" id="projects">
+  <h2 class="section_title">Projects</h2>
+  <span class="section_subtitle">My recent work</span>
 
-    <section class="portfolio section" id="portfolio">
-      <h2 class="section_title">Portfolio</h2>
-      <span class="section_subtitle">Most recent work</span>
+  <!-- SAME CONTAINER WIDTH -->
+  <div class="projects_container container">
 
-      <div class="portfolio_container container swiper-container">
-        <div class="swiper-wrapper">
-          <!-- ------------------------------Portfolio 1------------------- -->
-           <div class="portfolio_content grid swiper-slide">
-            <img src="image/Food-Share-image.jpeg" alt="" class="portfolio_img">
-
-            <div class="portfolio_data">
-              <h3 class="portfolio_title">Food Share </h3>
-              <p class="portfolio_description">A community-focused web application built to address food scarcity and waste by creating a transparent and efficient food donation network. This project highlights proficiency in building full-stack applications with robust features.</p>
-                <a href="https://food-share-client-by-marufa.netlify.app/" class="button button--flex button--small portfolio_button">
-                  Demo 
-                  <i class="uil uil-arrow-right button_icon"></i>
-                </a>
-            </div>
-           </div>
-
-           <!-- ------------------------------Portfolio 2------------------- -->
-           <div class="portfolio_content grid swiper-slide">
-            <img src="image/Skill.png" alt="" class="portfolio_img">
-
-            <div class="portfolio_data">
-              <h3 class="portfolio_title">
-SkillShare-A Local Skill Exchange Platform. </h3>
-              <p class="portfolio_description">This project aim to connect people within the same area to share and trade skills.Where providers and users also offer their own skills and exchange them for other skills,promoting learning,collaboration and community growth.</p>
-                <a href="https://skill-share-project-by-marufa.netlify.app/" class="button button--flex button--small portfolio_button">
-                  Demo 
-                  <i class="uil uil-arrow-right button_icon"></i>
-                </a>
-            </div>
-           </div>
-
-           <!-- ------------------------------Portfolio 3------------------- -->
-           <div class="portfolio_content grid swiper-slide">
-            <img src="image/Hero.png" alt="" class="portfolio_img">
-
-            <div class="portfolio_data">
-              <h3 class="portfolio_title">Hero-Apps </h3>
-              <p class="portfolio_description">This is a web-based application that showcase a collection of apps with detailed information. Users can explore trending apps in home page and explore all apps in Apps page and also view what apps he install in Installation page.It is also show the app details and a user can view ratings visually through interactive charts. This project handling dynamic data, interactive charting and responsive for all devices.</p>
-                <a href="https://hero-apps-by-marufa.netlify.app/" class="button button--flex button--small portfolio_button">
-                  Demo 
-                  <i class="uil uil-arrow-right button_icon"></i>
-                </a>
-            </div>
-           </div>
-
-        </div>
-
-
-        <!-- -------------add arrows----------- -->
-        <div class="swiper-button-next">
-          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-         </div>
-         <div class="swiper-button-prev">
-          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-         </div> 
-
-         <!-- -------------------add pagination---------- -->
-           <div class="swiper-pagination"></div> 
-       
+     <div class="project_card">
+      <img src="image/blodaid-image.jpeg">
+      <div class="project_content">
+        <h3>
+BloodAid</h3>
+        <p>Blood Donation Application</p>
+         <button class="details-btn button button--flex" onclick="openModal('blood')">
+  View Details <i class="uil uil-eye button_icon"></i>
+</button>
       </div>
-    </section>
+    </div>
+
+    <div class="project_card">
+      <img src="image/foodshare.png">
+      <div class="project_content">
+        <h3>Food Share</h3>
+        <p>Community-based food donation platform</p>
+       <button class="details-btn button button--flex" onclick="openModal('food')">
+  View Details <i class="uil uil-eye button_icon"></i>
+</button>
+      </div>
+    </div>
+
+    <div class="project_card">
+      <img src="image/Skill.png">
+      <div class="project_content">
+        <h3>SkillShare</h3>
+        <p>Local skill exchange platform</p>
+       <button class="details-btn button button--flex" onclick="openModal('skill')">
+  View Details <i class="uil uil-eye button_icon"></i>
+</button>
+      </div>
+    </div>
+
+    <div class="project_card">
+      <img src="image/Hero.png">
+      <div class="project_content">
+        <h3>Hero Apps</h3>
+        <p>App discovery & ratings</p>
+        <button class="details-btn button button--flex" onclick="openModal('hero')">
+  View Details <i class="uil uil-eye button_icon"></i>
+</button>
+      </div>
+    </div>
+
+
+    <div class="project_card">
+      <img src="image/taxiburger-img.png">
+      <div class="project_content">
+        <h3>Taxi Burger</h3>
+        <p>Digital Menu Card For Our Lovely Customer</p>
+         <button class="details-btn button button--flex" onclick="openModal('taxiBurger')">
+  View Details <i class="uil uil-eye button_icon"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= PROJECT MODAL ================= -->
+<div class="project_modal" id="project-modal">
+  <div class="project_modal-content">
+    <span class="project_modal-close" onclick="closeModal()">&times;</span>
+
+    <h3 id="modal-title"></h3>
+    <img id="modal-image" class="modal_img" />
+
+    <p><strong>Tech Stack:</strong> <span id="modal-tech"></span></p>
+    <p id="modal-description"></p>
+
+    <p><strong>Challenges:</strong></p>
+    <p id="modal-challenges"></p>
+
+    <p><strong>Future Plans:</strong></p>
+    <p id="modal-future"></p>
+
+    <div class="modal_links">
+      <a id="modal-live" target="_blank" class="button button--small">Live</a>
+      <a id="modal-github" target="_blank" class="button button--small">GitHub</a>
+    </div>
+  </div>
+</div>
+
+   
 
 
 <!-- ===============Project in mind=============== -->
